@@ -6,7 +6,6 @@ cd ./clawutil && git checkout $commit && cd ../ && \
 cd ./pyclaw   && git checkout $commit && cd ../ && \
 cd ./riemann  && git checkout $commit && cd ../ && \
 cd ./visclaw  && git checkout $commit && cd ../ && \
-cd ./clawpack && git checkout $commit && cd ../ && \
 cd ./geoclaw  && git checkout $commit && cd ../
 
 

@@ -1,22 +1,38 @@
 #!/bin/bash
 
+# after merge merge_adjoin branches into gpu_amr branches
+# shawn_dev branches in classic, pyclaw, visclaw are renamed to gpu
+# gpu_amr branches are renamed to gpu
 echo "checkout amrclaw ===================================>" && \
-    # cd ./amrclaw  && git checkout gpu_amr && cd ../ && \
-    cd ./amrclaw && git fetch xinshengqin && git checkout merge_adjoint && cd ../ && \
+    cd ./amrclaw && git fetch xinshengqin && git checkout gpu && cd ../ && \
 echo "checkout clawutil ===================================>" && \
-    cd ./clawutil && git fetch xinshengqin && git checkout gpu_amr && cd ../ && \
+    cd ./clawutil && git fetch xinshengqin && git checkout gpu && cd ../ && \
 echo "checkout riemann ===================================>" && \
-    # cd ./riemann  && git checkout gpu_amr && cd ../ && \
-    cd ./riemann && git fetch xinshengqin  && git checkout merge_adjoint && cd ../ && \
+    cd ./riemann && git fetch xinshengqin  && git checkout gpu && cd ../ && \
 echo "checkout geoclaw ===================================>" && \
-    # cd ./geoclaw  && git checkout gpu && cd ../
-    cd ./geoclaw && git fetch xinshengqin  && git checkout merge_adjoint && cd ../
+    cd ./geoclaw && git fetch xinshengqin  && git checkout gpu && cd ../
 echo "checkout classic ===================================>" && \
-    cd ./classic && git fetch xinshengqin  && git checkout shawn_dev && cd ../ && \
+    cd ./classic && git fetch xinshengqin  && git checkout gpu && cd ../ && \
 echo "checkout pyclaw ===================================>" && \
-    cd ./pyclaw && git fetch xinshengqin   && git checkout shawn_dev && cd ../ && \
+    cd ./pyclaw && git fetch xinshengqin   && git checkout gpu && cd ../ && \
 echo "checkout visclaw ===================================>" && \
-    cd ./visclaw && git fetch xinshengqin  && git checkout shawn_dev && cd ../
+    cd ./visclaw && git fetch xinshengqin  && git checkout gpu && cd ../
+
+# # after merging adjoint and v5.5.0 
+# echo "checkout amrclaw ===================================>" && \
+#     cd ./amrclaw && git fetch xinshengqin && git checkout merge_adjoint && cd ../ && \
+# echo "checkout clawutil ===================================>" && \
+#     cd ./clawutil && git fetch xinshengqin && git checkout gpu_amr && cd ../ && \
+# echo "checkout riemann ===================================>" && \
+#     cd ./riemann && git fetch xinshengqin  && git checkout merge_adjoint && cd ../ && \
+# echo "checkout geoclaw ===================================>" && \
+#     cd ./geoclaw && git fetch xinshengqin  && git checkout merge_adjoint && cd ../
+# echo "checkout classic ===================================>" && \
+#     cd ./classic && git fetch xinshengqin  && git checkout shawn_dev && cd ../ && \
+# echo "checkout pyclaw ===================================>" && \
+#     cd ./pyclaw && git fetch xinshengqin   && git checkout shawn_dev && cd ../ && \
+# echo "checkout visclaw ===================================>" && \
+#     cd ./visclaw && git fetch xinshengqin  && git checkout shawn_dev && cd ../
 
 # # before merge adjoint and v5.5.0
 # echo "checkout amrclaw ===================================>" && \
